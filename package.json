@@ -1,0 +1,28 @@
+{
+  "name": "cat-wiki-master",
+  "version": "1.0.0",
+  "description": "Cat encyclopedia. A devchallenges.io project solution...",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debo9210/cat-wiki-app.git"
+  },
+  "author": "Omololu Oshoyemi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/debo9210/cat-wiki-app/issues"
+  },
+  "homepage": "https://github.com/debo9210/cat-wiki-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
