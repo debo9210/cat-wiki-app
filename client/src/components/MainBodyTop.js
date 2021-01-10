@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import HeroImage from '../images/HeroImagemd.png';
 import JumbotronLogo from '../images/CatwikiWhiteLogo.svg';
 import tempImg from '../images/image1.png';
@@ -7,17 +8,17 @@ const MainBodyTop = ({ dropDownRef, showDropDown, hideDropDown, inputRef }) => {
   const DropDownLinkContainerRef = useRef(null);
 
   const filterSearch = () => {
-    let filter, aValue, i, txtValue;
+    let filter, pValue, i, txtValue;
 
     filter = inputRef.current.value.toUpperCase();
-    aValue = Array.from(DropDownLinkContainerRef.current.childNodes);
+    pValue = Array.from(DropDownLinkContainerRef.current.childNodes);
 
-    for (i = 0; i < aValue.length; i++) {
-      txtValue = aValue[i].textContent || aValue[i].innerText;
+    for (i = 0; i < pValue.length; i++) {
+      txtValue = pValue[i].textContent || pValue[i].innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        aValue[i].style.display = '';
+        pValue[i].style.display = '';
       } else {
-        aValue[i].style.display = 'none';
+        pValue[i].style.display = 'none';
       }
     }
   };
@@ -49,27 +50,17 @@ const MainBodyTop = ({ dropDownRef, showDropDown, hideDropDown, inputRef }) => {
               className='DropDownLinkContainer'
               ref={DropDownLinkContainerRef}
             >
-              <a className='DropDownLink' href='#'>
-                American Bobtail
-              </a>
-              <a className='DropDownLink' href='#'>
-                American Curl
-              </a>
-              <a className='DropDownLink' href='#'>
-                American Shorthair
-              </a>
-              <a className='DropDownLink' href='#'>
-                American Wirehair
-              </a>
-              <a className='DropDownLink' href='#'>
-                American Wirehair
-              </a>
-              <a className='DropDownLink' href='#'>
-                American Wirehair
-              </a>
-              <a className='DropDownLink' href='#'>
-                American Wirehair
-              </a>
+              <Link to='/cat-info'>
+                <p className='DropDownLink'>American Bobtail</p>
+              </Link>
+
+              <Link to='/cat-info'>
+                <p className='DropDownLink'>American Curl</p>
+              </Link>
+
+              <Link to='/cat-info'>
+                <p className='DropDownLink'>American Shorthair</p>
+              </Link>
             </div>
           </div>
         </div>

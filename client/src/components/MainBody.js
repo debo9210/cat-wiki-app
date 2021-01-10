@@ -11,7 +11,7 @@ const MainBody = () => {
   };
 
   const hideDropDownHandler = () => {
-    dropDownRef.current.classList.remove('Show');
+    // dropDownRef.current.classList.remove('Show');
   };
 
   return (
