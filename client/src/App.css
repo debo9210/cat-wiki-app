@@ -1,3 +1,348 @@
 .App {
-  text-align: center;
+  /* border: 1px solid green; */
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* header styles */
+.HeaderContainer {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* main body styles */
+.MainBodyContainer {
+  /* border: 1px solid red; */
+  margin: 20px 0 40px 0;
+}
+
+/* mainbody top styles */
+.MainBodyTopContainer {
+  /* background: #e3e1dc; */
+  /* border: 1px solid blue; */
+  margin-bottom: 30px;
+}
+
+.Jumbotron {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: 42px;
+  border-top-left-radius: 42px;
+}
+
+.JumbotronDetails {
+  /* border: 1px solid orange; */
+  margin-left: 80px;
+  width: 35%;
+}
+
+.JumbotronLogo {
+  width: 300px;
+}
+
+.JumbotronText {
+  width: 371.3px;
+  height: 58px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.InputGroup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 394.62px;
+  height: 49.67px;
+  background: #ffffff;
+  border-radius: 59px;
+}
+
+.SearchInput {
+  margin-left: 20px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  color: #291507;
+}
+
+.SearchInput::placeholder {
+  color: #291507;
+}
+
+.SearchIcon {
+  margin-right: 20px;
+  color: #291507;
+}
+
+.DropDown {
+  margin-top: 20px;
+  width: 394.62px;
+  height: 190.72px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 10px 0;
+  position: absolute;
+  z-index: 1;
+  display: none;
+}
+
+.DropDownLinkContainer {
+  overflow: auto;
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+
+.DropDownLinkContainer::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.DropDownLinkContainer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #dfdbdb;
+  border-radius: 24px;
+}
+
+/* Handle */
+.DropDownLinkContainer::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.DropDownLinkContainer::-webkit-scrollbar-thumb:hover {
+  background: #636161;
+}
+
+.DropDownLink {
+  display: block;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+  /* border: 1px solid red; */
+  width: 97%;
+  margin: 0 auto;
+  padding: 10px 7px;
+}
+
+.DropDownLink:hover {
+  background: rgba(151, 151, 151, 0.1);
+  border-radius: 12px;
+}
+
+.Show {
+  display: block;
+}
+
+.BreedsDisplayContainer {
+  background: #e3e1dc;
+  border: 1px solid #e3e1dc;
+  margin: 0;
+  border-bottom-right-radius: 42px;
+  border-bottom-left-radius: 42px;
+}
+
+.BreedsDisplay {
+  /* border: 1px solid red; */
+  width: 88.1%;
+  margin: 0 auto;
+}
+
+.HR {
+  border: 1px solid #4d270c;
+  margin: 0;
+  width: 52px;
+  /* float: left; */
+}
+
+.BreedDisplayText {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 25px 0 0 0;
+  padding-bottom: 5px;
+}
+
+.DiscoverBreeds {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.BreedsHeading {
+  width: 506.93px;
+  height: 118px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 49px;
+  margin: 0;
+}
+
+.SeeMoreLink {
+  display: flex;
+  align-items: center;
+}
+
+.SeeMoreLink a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(41, 21, 7, 0.6);
+  margin-right: 5px;
+}
+
+.SeeMoreLink i {
+  color: #7f736a;
+  margin-right: 5px;
+}
+
+.BreedImageDisplay {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.8%;
+  margin: 20px 0 50px 0;
+}
+
+.BreedImageContainer {
+  /* border: 1px solid yellow; */
+  width: 22.9%;
+}
+
+.BreedImage {
+  width: 100%;
+  height: 250px;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: cover;
+  border-radius: 24px;
+}
+
+.BreedName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+/* mainbody bottom styles */
+.MainBodyBottomContainer {
+  /* border: 1px solid purple; */
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.AboutCat {
+  /* border: 1px solid red; */
+  width: 45%;
+  /* height: 80%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AboutCatHeading {
+  width: 430.02px;
+  height: 118px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 55px;
+  margin: 0;
+  padding-top: 20px;
+}
+
+.AboutCatText {
+  width: 407.74px;
+  height: 66px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 40px 0;
+}
+
+.CatImageContainer {
+  /* border: 1px solid yellow; */
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 55%;
+  height: 600px;
+  gap: 20px;
+}
+
+.CatImage {
+  width: 273.52px;
+  height: 167.08px;
+  border-radius: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.c2 {
+  width: 195.49px;
+  height: 293.24px;
+  margin-left: 75px;
+}
+
+.c3 {
+  width: 238.47px;
+  height: 385.87px;
+}
+
+/* footer styles */
+footer {
+  background: #000;
+  height: 80px;
+  padding: 15px 0 0 0;
+  border-top-right-radius: 42px;
+  border-top-left-radius: 42px;
+}
+
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.FooterText {
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.FooterText span {
+  margin-right: 10px;
+}
+
+.FooterLogo {
+  width: 100px;
 }
