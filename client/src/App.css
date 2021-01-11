@@ -423,6 +423,55 @@ a {
   background-size: cover;
 }
 
+/* top breed styles */
+.TopBreedContainer {
+  /* border: 1px solid blue; */
+  margin: 30px 0 70px 0;
+}
+
+.SearchedBreedHeading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  margin: 0 0 40px 0;
+}
+
+.SearchedBreed {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* border: 1px solid green; */
+  margin-bottom: 40px;
+}
+
+.SearchedBreedImage {
+  width: 170px;
+  height: 170px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 24px;
+  /* width: 30%; */
+  margin-right: 35px;
+}
+
+.SearchedBreedName {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  margin: 0;
+  /* border: 1px solid red; */
+}
+
+.SearchedBreedAbout {
+  width: 888px;
+  height: 66px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+
 /* footer styles */
 footer {
   background: #000;
