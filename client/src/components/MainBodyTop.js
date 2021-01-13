@@ -1,12 +1,16 @@
-import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import HeroImage from '../images/HeroImagemd.png';
 import JumbotronLogo from '../images/CatwikiWhiteLogo.svg';
-import tempImg from '../images/image1.png';
 
-const MainBodyTop = ({ dropDownRef, showDropDown, hideDropDown, inputRef }) => {
-  const DropDownLinkContainerRef = useRef(null);
-
+const MainBodyTop = ({
+  dropDownRef,
+  showDropDown,
+  inputRef,
+  DropDownLinkContainerRef,
+  catName,
+  topBreed,
+  seeMorePage,
+}) => {
   const filterSearch = () => {
     let filter, pValue, i, txtValue;
 
@@ -36,13 +40,17 @@ const MainBodyTop = ({ dropDownRef, showDropDown, hideDropDown, inputRef }) => {
             <input
               className='SearchInput'
               onFocus={showDropDown}
-              onBlur={hideDropDown}
               onKeyUp={filterSearch}
               type='text'
               placeholder='Enter your breed'
               ref={inputRef}
             />
-            <i className='material-icons SearchIcon'>search</i>
+            <i
+              onClick={() => dropDownRef.current.classList.toggle('Show')}
+              className='material-icons SearchIcon'
+            >
+              search
+            </i>
           </div>
 
           <div className='DropDown' ref={dropDownRef}>
@@ -50,17 +58,7 @@ const MainBodyTop = ({ dropDownRef, showDropDown, hideDropDown, inputRef }) => {
               className='DropDownLinkContainer'
               ref={DropDownLinkContainerRef}
             >
-              <Link to='/cat-info'>
-                <p className='DropDownLink'>American Bobtail</p>
-              </Link>
-
-              <Link to='/cat-info'>
-                <p className='DropDownLink'>American Curl</p>
-              </Link>
-
-              <Link to='/cat-info'>
-                <p className='DropDownLink'>American Shorthair</p>
-              </Link>
+              {catName}
             </div>
           </div>
         </div>
@@ -73,44 +71,12 @@ const MainBodyTop = ({ dropDownRef, showDropDown, hideDropDown, inputRef }) => {
           <div className='DiscoverBreeds'>
             <h2 className='BreedsHeading'>66+ Breeds For you to discover</h2>
             <div className='SeeMoreLink'>
-              <a href='#'>see more</a>
+              <button onClick={seeMorePage}>see more</button>
               <i className='material-icons'>trending_flat</i>
             </div>
           </div>
 
-          <div className='BreedImageDisplay'>
-            <div className='BreedImageContainer'>
-              <div
-                className='BreedImage'
-                style={{ backgroundImage: `url(${tempImg})` }}
-              ></div>
-              <p className='BreedName'>Bengal</p>
-            </div>
-
-            <div className='BreedImageContainer'>
-              <div
-                className='BreedImage'
-                style={{ backgroundImage: `url(${tempImg})` }}
-              ></div>
-              <p className='BreedName'>Bengal</p>
-            </div>
-
-            <div className='BreedImageContainer'>
-              <div
-                className='BreedImage'
-                style={{ backgroundImage: `url(${tempImg})` }}
-              ></div>
-              <p className='BreedName'>Bengal</p>
-            </div>
-
-            <div className='BreedImageContainer'>
-              <div
-                className='BreedImage'
-                style={{ backgroundImage: `url(${tempImg})` }}
-              ></div>
-              <p className='BreedName'>Bengal</p>
-            </div>
-          </div>
+          <div className='BreedImageDisplay'>{topBreed}</div>
         </div>
       </div>
     </div>

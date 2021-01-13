@@ -5,6 +5,9 @@ const router = express.Router();
 
 const catAuth = require('../../config/keys').catAuth;
 
+//model config
+const CatWiki = require('../../model/catWikiSearch');
+
 const config = {
   headers: {
     'Content-Type': 'application/json',
@@ -53,6 +56,33 @@ router.get('/images/:breed_id', (req, res) => {
       return res.json({ images: images });
     })
     .catch((error) => res.status(404).json(error));
+});
+
+// @ route Get /api/cat-wiki/search-names
+// @ description get searched names from db
+// @ access Public
+router.get('/search-names', (req, res) => {
+  CatWiki.find({ name: 'breedNames' })
+    .then((name) => {
+      return res.json(name);
+    })
+    .catch((err) => res.status(404).json({ msg: 'No data found' }));
+});
+
+// @ route Put /api/cat-wiki/search/:catName
+// @ description update searched names in db
+// @ access Public
+router.put('/search-name/:catName', (req, res) => {
+  CatWiki.findOneAndUpdate({ name: 'breedNames' })
+    .then((name) => {
+      name.searchNames.unshift(req.params.catName);
+
+      name.save().then((name) => res.json(name));
+    })
+    .catch((err) => res.status(404).json(err));
+
+  // searchName.save().then((name) => res.json(name));
+  // res.json(searchName);
 });
 
 module.exports = router;

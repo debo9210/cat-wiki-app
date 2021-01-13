@@ -1,8 +1,17 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
+import {
+  allCatBreedsReducer,
+  getSearchedBreedsReducer,
+  updateSearchedBreedsReducer,
+} from './redux/reducers/CatBreedsReducers';
 
-const reducers = combineReducers({});
+const reducers = combineReducers({
+  allCatBreeds: allCatBreedsReducer,
+  searchedBreeds: getSearchedBreedsReducer,
+  updateSearchedBreeds: updateSearchedBreedsReducer,
+});
 
 const initialState = {};
 
