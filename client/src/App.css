@@ -12,7 +12,7 @@
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 @keyframes spin {
@@ -51,6 +51,7 @@
   align-items: center;
   border-top-right-radius: 42px;
   border-top-left-radius: 42px;
+  background-image: url('./HeroImagemd.png');
 }
 
 .JumbotronDetails {
@@ -61,6 +62,10 @@
 
 .JumbotronLogo {
   width: 300px;
+}
+
+.JumbotronLogoMobile {
+  display: none;
 }
 
 .JumbotronText {
@@ -105,6 +110,14 @@
   margin-right: 20px;
   color: #291507;
   cursor: pointer;
+}
+
+.MobileInputGroup {
+  display: none;
+}
+
+.DropDownMobile {
+  display: none;
 }
 
 .DropDown {
@@ -160,10 +173,6 @@
   padding: 10px 7px;
 }
 
-a {
-  text-decoration: none;
-}
-
 .DropDownLink:hover {
   background: rgba(151, 151, 151, 0.1);
   border-radius: 12px;
@@ -188,7 +197,7 @@ a {
 }
 
 .HR {
-  border: 1px solid #4d270c;
+  border: 2px solid #4d270c;
   margin: 0;
   width: 52px;
   /* float: left; */
@@ -245,13 +254,19 @@ a {
   /* border: 1px solid red; */
   display: flex;
   flex-wrap: wrap;
+  /* justify-content: center; */
   gap: 2.8%;
+  /* gap: 30px; */
   margin: 20px 0 50px 0;
 }
 
 .BreedImageContainer {
   /* border: 1px solid yellow; */
   width: 22.9%;
+  width: 243.5px;
+  /* height: 250px; */
+  height: 100%;
+  margin-bottom: 8px;
 }
 
 .BreedImage {
@@ -274,17 +289,20 @@ a {
 .MainBodyBottomContainer {
   /* border: 1px solid purple; */
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 80%;
   margin: 0 auto;
 }
 
 .AboutCat {
   /* border: 1px solid red; */
-  width: 45%;
+  /* width: 45%; */
   /* height: 80%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* flex-wrap: wrap; */
 }
 
 .AboutCatHeading {
@@ -308,19 +326,31 @@ a {
   margin: 40px 0;
 }
 
+.ReadMoreLink {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgba(41, 21, 7, 0.6);
+  margin-right: 5px;
+}
+
 .CatImageContainer {
   /* border: 1px solid yellow; */
   margin-top: 80px;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 55%;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
+  /* flex-shrink: inherit; */
+  /* width: 55%; */
   height: 600px;
   gap: 20px;
 }
 
 .CatImage {
   width: 273.52px;
+  /* width: 50%; */
   height: 167.08px;
   border-radius: 24px;
   background-repeat: no-repeat;
@@ -330,12 +360,14 @@ a {
 
 .c2 {
   width: 195.49px;
+  /* width: 50%; */
   height: 293.24px;
-  margin-left: 75px;
+  margin: 20px 0 0 75px;
 }
 
 .c3 {
   width: 238.47px;
+  /* width: 40%; */
   height: 385.87px;
 }
 
@@ -350,7 +382,7 @@ a {
   width: 90%;
   margin: 0 auto;
   /* border: 1px solid blue; */
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .CatInfoImage {
@@ -360,7 +392,7 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-top: 25px;
+  margin: 25px 40px 0 0;
 }
 
 .CatInfo {
@@ -373,14 +405,19 @@ a {
   font-size: 36px;
 }
 
+.CatAboutContainer {
+  margin-bottom: 30px;
+}
+
 .CatAbout {
   width: 601px;
-  height: 88px;
+  width: 90%;
+  height: 100%;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
-  margin: -10px 0 20px 0;
+  margin: 0;
 }
 
 .RatingName {
@@ -414,9 +451,13 @@ a {
 .CatBar {
   width: 40px;
   height: 8px;
-  background: #544439;
+  background: #e0e0e0;
   border-radius: 8px;
   margin: 5px;
+}
+
+.CatBarFill {
+  background: #544439;
 }
 
 .CatInfoPhotos {
@@ -527,4 +568,322 @@ footer {
 
 .FooterLogo {
   width: 100px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+  .HeaderContainer {
+    margin-top: 10px;
+  }
+
+  .HeaderBrand {
+    width: 100px;
+  }
+
+  .Jumbotron {
+    height: 217px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    border-top-right-radius: 42px;
+    border-top-left-radius: 42px;
+    background-image: url('./HeroImagesm.png');
+  }
+
+  .JumbotronDetails {
+    /* border: 1px solid orange; */
+    margin-left: 35px;
+    width: 35%;
+  }
+
+  .JumbotronLogo {
+    width: 300px;
+    display: none;
+  }
+
+  .JumbotronLogoMobile {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .JumbotronText {
+    width: 185.92px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .InputGroup {
+    display: none;
+  }
+
+  .MobileInputGroup {
+    display: block;
+    margin-bottom: 17px;
+  }
+
+  .InputGroupMobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 150.62px;
+    height: 49.67px;
+    background: #ffffff;
+    border-radius: 59px;
+  }
+
+  .SearchInputMobile {
+    margin-left: 15px;
+    width: 80%;
+    border: none;
+    outline: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 15px;
+    color: #291507;
+  }
+
+  .InputSearchMobile {
+    margin-left: 15px;
+    width: 70%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 15px;
+    /* identical to box height */
+    color: #291507;
+  }
+
+  .SearchIconMobile {
+    margin-right: 15px;
+    color: #291507;
+    cursor: pointer;
+  }
+
+  .DropDownMobile {
+    display: none;
+    background: #fff;
+    width: 90%;
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    z-index: 2;
+    border-radius: 12px;
+    /* border: 1px solid red; */
+  }
+
+  .ClearIconContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .ClearIcon {
+    margin: 10px 20px 0 0;
+    padding: 10px;
+    font-size: 30px;
+    background: rgba(114, 112, 112, 0.1);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .InputGroupMobile2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto 0 auto;
+    width: 90%;
+    height: 49.67px;
+    background: #ffffff;
+    border-radius: 59px;
+    border: 1px solid #291507;
+  }
+
+  .DropDownLinkContainerMobile {
+    width: 90%;
+    height: 212px;
+    margin: 30px auto 20px auto;
+    overflow: auto;
+  }
+
+  .DropDownLinkContainerMobile::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  .DropDownLinkContainerMobile::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px #dfdbdb;
+    border-radius: 24px;
+  }
+
+  /* Handle */
+  .DropDownLinkContainerMobile::-webkit-scrollbar-thumb {
+    background: #bdbdbd;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  .DropDownLinkContainerMobile::-webkit-scrollbar-thumb:hover {
+    background: #636161;
+  }
+
+  .BreedsHeading {
+    width: 185.12px;
+    height: 44px;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  .SeeMoreHide {
+    display: none;
+  }
+
+  .BreedImageDisplay {
+    /* border: 1px solid red; */
+    gap: 15px;
+    margin: 40px 0 30px 0;
+  }
+
+  .BreedImageContainer {
+    /* border: 1px solid yellow; */
+    width: 47.2%;
+    height: 100%;
+    margin-bottom: 8px;
+  }
+
+  .BreedImage {
+    height: 154.77px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .MainBodyBottomContainer {
+    /* border: 1px solid purple; */
+    width: 100%;
+    margin: 70px auto 0 auto;
+  }
+
+  .AboutCat {
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+
+  .AboutCatHeading {
+    width: 315.58px;
+    height: 114.94px;
+    font-size: 40px;
+    line-height: 49px;
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  .AboutCatText {
+    width: 339px;
+    height: 85.72px;
+    margin: 40px 0 30px 0;
+  }
+
+  .CatImageContainer {
+    /* border: 1px solid yellow; */
+    margin-top: 80px;
+    width: 100%;
+    height: 420px;
+    gap: 20px;
+  }
+
+  .CatImage {
+    width: 187.03px;
+    height: 105.09px;
+  }
+
+  .c2 {
+    width: 136.95px;
+    /* width: 50%; */
+    height: 293.24px;
+    margin: 20px 0 0 50px;
+  }
+
+  .c3 {
+    width: 162.98px;
+    /* width: 40%; */
+    height: 385.87px;
+  }
+
+  /* cat info page styles */
+  .CatInfoContainer {
+    /* border: 1px solid red; */
+    margin: 20px 0 50px 0;
+  }
+
+  .CatInfoDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    /* justify-content: space-between; */
+  }
+
+  .CatInfoImage {
+    width: 100%;
+    height: 371.04px;
+    margin: 0 auto;
+  }
+
+  .CatInfo {
+    width: 100%;
+  }
+
+  .CatInfoHeading {
+    width: 100%;
+    font-size: 34px;
+  }
+
+  .CatAbout {
+    width: 100%;
+    margin: 0;
+  }
+
+  .CatRating {
+    width: 100%;
+  }
+
+  .CatBar {
+    width: 30px;
+  }
+
+  .PhotoHeading {
+    width: 80%;
+    margin: 0 auto 30px auto;
+    text-align: center;
+  }
+
+  .MorePhotosContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .MorePhoto {
+    width: 46.7%;
+    height: 163px;
+  }
+
+  footer {
+    height: 150px;
+    padding: 15px 0 0 0;
+    /* margin-top: -190px; */
+  }
+
+  .Footer {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    margin: 10px auto 0 auto;
+  }
+
+  .FooterLogo {
+    margin-bottom: 10px;
+  }
 }

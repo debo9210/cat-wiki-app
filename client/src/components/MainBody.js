@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import MainBodyTop from './MainBodyTop';
@@ -52,10 +52,12 @@ const MainBody = () => {
   const dropDownRef = useRef(null);
   const inputRef = useRef(null);
   const DropDownLinkContainerRef = useRef(null);
+  const dropDownMobileRef = useRef(null);
 
   const mostSearched = (e) => {
     dispatch(updateSearchedBreeds(e.target.textContent));
-    history.push(`/cat-info/${e.target.textContent}`);
+
+    history.push(`/cat-info/${e.target.textContent}/${e.target.id}`);
   };
 
   const seeMorePageHandler = () => {
@@ -65,7 +67,12 @@ const MainBody = () => {
   let catName;
   if (catBreedsArray) {
     catName = catBreedsArray.map((cat) => (
-      <p key={cat.id} onClick={mostSearched} className='DropDownLink'>
+      <p
+        key={cat.id}
+        onClick={mostSearched}
+        className='DropDownLink'
+        id={cat.id}
+      >
         {cat.name}
       </p>
     ));
@@ -90,6 +97,7 @@ const MainBody = () => {
         catName={catName}
         topBreed={loading ? <Loader /> : topTenBreed}
         seeMorePage={seeMorePageHandler}
+        dropDownMobileRef={dropDownMobileRef}
       />
       <MainBodyBottom />
     </main>

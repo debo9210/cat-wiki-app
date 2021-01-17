@@ -27,7 +27,7 @@ router.get('/breeds', (req, res) => {
     .catch((error) => res.status(404).json(error));
 });
 
-// @ route GET /api/cat-wiki/breeds
+// @ route GET /api/cat-wiki/breed-type/:breed_name
 // @ description get cat by breed name
 // @ access Public
 router.get('/breed-type/:breed_name', (req, res) => {
@@ -48,7 +48,7 @@ router.get('/breed-type/:breed_name', (req, res) => {
 router.get('/images/:breed_id', (req, res) => {
   axios
     .get(
-      `https://api.thecatapi.com/v1/images/search?breed_id=${req.params.breed_id}&limit=8`,
+      `https://api.thecatapi.com/v1/images/search?breed_id=${req.params.breed_id}&limit=9`,
       config
     )
     .then((response) => {

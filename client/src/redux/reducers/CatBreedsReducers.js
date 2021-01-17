@@ -2,6 +2,12 @@ import {
   GET_ALL_BREEDS_FAIL,
   GET_ALL_BREEDS_REQUEST,
   GET_ALL_BREEDS_SUCCESS,
+  GET_BREED_IMAGE_FAIL,
+  GET_BREED_IMAGE_REQUEST,
+  GET_BREED_IMAGE_SUCCESS,
+  GET_BREED_INFO_FAIL,
+  GET_BREED_INFO_REQUEST,
+  GET_BREED_INFO_SUCCESS,
   GET_SEARCH_BREEDS_FAIL,
   GET_SEARCH_BREEDS_REQUEST,
   GET_SEARCH_BREEDS_SUCCESS,
@@ -21,6 +27,46 @@ export const allCatBreedsReducer = (state = [], action) => {
         catBreedsArray: action.payload,
       };
     case GET_ALL_BREEDS_FAIL:
+      return {
+        loading: false,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
+export const catBreedInfoReducer = (state = [], action) => {
+  switch (action.type) {
+    case GET_BREED_INFO_REQUEST:
+      return { ...state, loading: true };
+    case GET_BREED_INFO_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        breedDetails: action.payload,
+      };
+    case GET_BREED_INFO_FAIL:
+      return {
+        loading: false,
+        error: action.payload,
+      };
+    default:
+      return state;
+  }
+};
+
+export const catBreedImageReducer = (state = {}, action) => {
+  switch (action.type) {
+    case GET_BREED_IMAGE_REQUEST:
+      return { ...state, loading: true };
+    case GET_BREED_IMAGE_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        catImages: action.payload,
+      };
+    case GET_BREED_IMAGE_FAIL:
       return {
         loading: false,
         error: action.payload,

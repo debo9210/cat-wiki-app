@@ -1,7 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { mostSearchedBreeds } from '../utils/MostSearchedCats';
-import tempImg from '../images/image3.png';
 
 const TopBreedPage = () => {
   const { breedNames } = useSelector((state) => state.searchedBreeds);

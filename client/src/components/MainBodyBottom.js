@@ -14,21 +14,30 @@ const MainBodyBottom = () => {
           chemicals in your body which lower your stress and anxiety leves
         </p>
         <div className='SeeMoreLink'>
-          <a href='#'>read more</a>
+          <a
+            className='ReadMoreLink'
+            href='https://www.helpguide.org/articles/healthy-living/joys-of-owning-a-cat.htm'
+            target='_blank'
+            rel='noreferrer'
+          >
+            read more
+          </a>
           <i className='material-icons'>trending_flat</i>
         </div>
       </div>
 
       <div className='CatImageContainer'>
-        <div
-          className='CatImage c1'
-          style={{ backgroundImage: `url(${image2})` }}
-        ></div>
+        <div className='CatImageLeft'>
+          <div
+            className='CatImage c1'
+            style={{ backgroundImage: `url(${image2})` }}
+          ></div>
 
-        <div
-          className='CatImage c2'
-          style={{ backgroundImage: `url(${image1})` }}
-        ></div>
+          <div
+            className='CatImage c2'
+            style={{ backgroundImage: `url(${image1})` }}
+          ></div>
+        </div>
 
         <div
           className='CatImage c3'

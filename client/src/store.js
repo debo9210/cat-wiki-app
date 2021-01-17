@@ -5,12 +5,16 @@ import {
   allCatBreedsReducer,
   getSearchedBreedsReducer,
   updateSearchedBreedsReducer,
+  catBreedInfoReducer,
+  catBreedImageReducer,
 } from './redux/reducers/CatBreedsReducers';
 
 const reducers = combineReducers({
   allCatBreeds: allCatBreedsReducer,
   searchedBreeds: getSearchedBreedsReducer,
   updateSearchedBreeds: updateSearchedBreedsReducer,
+  catBreedInfo: catBreedInfoReducer,
+  catBreedImage: catBreedImageReducer,
 });
 
 const initialState = {};
